@@ -1,0 +1,13 @@
+User Guide
+Build the Docker Image:
+Run docker build -t flask-xss-demo .
+Run the Docker Container:
+Use docker run -d -p 5000:5000 flask-xss-demo
+Access the Flask app by navigating to http://localhost:5000/?data=<script>alert('XSS');</script> to test the XSS vulnerability.
+OS Setting
+This Dockerfile uses a small, lightweight base image (python:3.9-slim) which is minimalistic and efficient for quick setups.
+Game Management Setting
+A user named gm is added with password gm and added to the root group for administrative purposes.
+User Setting
+A regular user named allen is created with a home directory containing a file named user.txt which includes a string "user's flag".
+allen's password is set to "password". SSH service is enabled to accept connections from any source IP.
