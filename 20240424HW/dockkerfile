@@ -1,0 +1,36 @@
+# 說明
+# 本 Dockerfile 用於建立一個供學習使用的有漏洞的Ubuntu環境。
+# 使用前，請確保 Setting.sh 腳本位於同一目錄下。
+# 在終端機中執行以下指令來構建 Docker 映像：docker build -t ubuntu_vulnerable .
+# 構建完成後，可以使用以下指令來啟動容器：docker run -d -p 22:22 ubuntu_vulnerable
+# 這樣將映射容器的 SSH 22 端口到本機的相應端口。
+
+# 設定基底容器
+FROM ubuntu:latest
+
+# 更新Ubuntu套件清單，確保安裝時使用最新版本的軟體
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    openssh-server \
+    dos2unix \
+    && rm -rf /var/lib/apt/lists/*
+
+# 初始化設定
+# 複製 Setting.sh 腳本到容器的 /root 目錄
+COPY Setting.sh /root/Setting.sh
+
+# 轉換 Setting.sh 從DOS格式到UNIX格式，避免換行符問題
+RUN dos2unix /root/Setting.sh
+
+# 給予 Setting.sh 執行權限
+RUN chmod +x /root/Setting.sh
+
+# 執行 Setting.sh 來設定Ubuntu
+RUN /root/Setting.sh
+
+# 設定容器起始時啟動SSH服務
+RUN mkdir /var/run/sshd
+CMD ["/usr/sbin/sshd", "-D"]
+
+# 設定網路，開放22端口以供SSH使用
+EXPOSE 22
