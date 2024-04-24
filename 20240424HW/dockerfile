@@ -29,7 +29,7 @@ RUN chmod +x /root/simplebox.sh
 RUN /root/simplebox.sh
 
 # 設定容器起始時啟動SSH服務
-RUN mkdir /var/run/sshd
+RUN mkdir -p /var/run/sshd
 CMD ["/usr/sbin/sshd", "-D"]
 
 # 設定網路，開放22端口以供SSH使用
