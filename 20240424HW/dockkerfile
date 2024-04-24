@@ -17,16 +17,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # 初始化設定
 # 複製 Setting.sh 腳本到容器的 /root 目錄
-COPY Setting.sh /root/Setting.sh
+COPY simplebox.sh /root/simplebox.sh
 
-# 轉換 Setting.sh 從DOS格式到UNIX格式，避免換行符問題
-RUN dos2unix /root/Setting.sh
+# 轉換 Ssimplebox.sh 從DOS格式到UNIX格式，避免換行符問題
+RUN dos2unix /root/simplebox.sh
 
-# 給予 Setting.sh 執行權限
-RUN chmod +x /root/Setting.sh
+# 給予 simplebox.sh 執行權限
+RUN chmod +x /root/simplebox.sh
 
-# 執行 Setting.sh 來設定Ubuntu
-RUN /root/Setting.sh
+# 執行 simplebox.sh 來設定Ubuntu
+RUN /root/simplebox.sh
 
 # 設定容器起始時啟動SSH服務
 RUN mkdir /var/run/sshd
