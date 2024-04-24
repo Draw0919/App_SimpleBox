@@ -28,7 +28,7 @@
   * check whether sudo function exists. if sudo not exist, install it.
   * authorize all users the privilege that can execute cp command with root privileged.
   *root.txt is locked by the password's hash value
-  *create 10 root.txt，only one will be matched with the password hash value
+  *create 10 root.txt，every files' content is different and every file will be encrypted by random hash，only one's content is root's flag and it's hash will matched with the password hash 
 # ChatGPT回復格式
 
 ## 注意事項：
