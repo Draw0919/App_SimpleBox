@@ -22,7 +22,7 @@
   - add a new user, gary, who is a regular user.
   - change gary's password to plaintext "password". Ex. echo "gary:password" | chpasswd
   - In gary's home directory create a new file, named user.txt. And add a string "user's flag" to the file.
-  - set allen's password as plaintext "password" exactly, not use crypted string. 
+  - set gary's password as plaintext "password" exactly, not use crypted string. 
 
 ## 設定內部擴散弱點：
   * In root's home directory create a new file, named root.txt. And add a string "root's flag" to the file.
