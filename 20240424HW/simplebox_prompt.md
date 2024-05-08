@@ -1,3 +1,4 @@
+我要用docker 建立一台靶機，並透過以下範例
 # 目的 
 
 ## 未來運用構想：
@@ -28,8 +29,9 @@
   * check whether sudo function exists. if sudo not exist, install it.
   * authorize all users the privilege that can execute cp command with root privileged.
   *root.txt is locked by the password's hash value
-  *create 10 different names .txt，every files' content is different and every file will be encrypted by    random hash
- *only one's content is root's flag and will be matched with the password hash value
+  *create 50 different names  .txt  file in "user" path, every files' content is different and every file will be 
+  encrypted , the encrypted files' hash are different.
+  *Its important >the file's hash  which included root's flag  will be matched with the password hash value
 # ChatGPT回復格式
 
 ## 注意事項：
@@ -39,6 +41,7 @@
   * This script will be run in Ubuntu container with only core functions, use core commands only.
   * do the work step by step.make it easy to understand for students.
   * use limited echo lines with traditional Chinese I show you in following reference.
+  * Its important >avoid attacker use SQL injection attack 
  
 ## 回復範例：
   #!/bin/bash
