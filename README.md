@@ -7,11 +7,11 @@
 ![語言](https://img.shields.io/github/languages/count/Draw0919/App_SimpleBox?style=for-the-badge)
 * Static Info:
   ![Bash使用](https://img.shields.io/badge/Bash_Script-2A2Ba2?style=for-the-badge)
-  ![Docker使用](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white?style=for-the-badge)
-  ![Python使用](https://img.shields.io/badge/Python-14354C.svg?logo=python&logoColor=white?style=for-the-badge)
+  ![Docker使用](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=for-the-badge)
+  ![Python使用](https://img.shields.io/badge/Python-14354C.svg?logo=python&logoColor=white&style=for-the-badge)
 * Development:
   ![版權宣告](https://img.shields.io/github/license/Draw0919/App_SimpleBox?style=for-the-badge)
-  ![Github Size](https://img.shields.io/github/repo-size/Draw0919/App_SimpleBox)
+  ![Github Size](https://img.shields.io/github/repo-size/Draw0919/App_SimpleBox?style=for-the-badge)
 
 ### 一、運用目標
 
