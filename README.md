@@ -1,4 +1,12 @@
 # App_SimpleBox
+>github/Draw0919
+* Static Info:
+  ![Bash使用](https://img.shields.io/badge/Bash_Script-2A2Ba2)
+  ![Docker使用](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+  ![Python使用](https://img.shields.io/badge/Python-14354C.svg?logo=python&logoColor=white)
+* Development:
+  ![版權宣告](https://img.shields.io/github/license/Draw0919/App_SimpleBox)
+
 ### 一、運用目標
 
 * 提供一個腳本，執行後可建立簡單靶機環境。
